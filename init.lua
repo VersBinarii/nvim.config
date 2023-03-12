@@ -24,7 +24,6 @@ return {
     underline = true,
   },
   lsp = {
-    -- skip_setup = { "rust_analyzer" },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -49,24 +48,6 @@ return {
     servers = {
       -- "pyright"
     },
-    -- Add overrides for LSP server settings, the keys are the name of the server
-    ["server-settings"] = {
-      rust_analyzer = {
-        settings = {
-          ["rust-analyzer"] = {
-            checkOnSave = {
-              command = "clippy"
-            },
-            procMacro = {
-              enable = true
-            },
-            inlayHints = {
-              locationLinks = false
-            }
-          }
-        }
-      }
-    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
